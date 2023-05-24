@@ -28,26 +28,10 @@ import org.openqa.selenium.support.ui.Select;
 
 public class TestCase7 {
     ChromeDriver driver;
-    public TestCase7()
-    {
-        System.out.println("Constructor: TestCases");
-        WebDriverManager.chromedriver().timeout(30).setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-    }
-
-    public void endTest()
-    {
-        System.out.println("End Test: TestCases");
-        driver.close();
-        driver.quit();
-
-
-    }
+    
       
     public void testCase_7(){
+        this.driver=TestCases.TestCases();
         //Launch Chrome
         driver.get("https://the-internet.herokuapp.com/nested_frames");
         //switch to top frame

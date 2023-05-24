@@ -28,26 +28,10 @@ import org.openqa.selenium.support.ui.Select;
 
 public class TestCase8 {
     ChromeDriver driver;
-    public TestCase8()
-    {
-        System.out.println("Constructor: TestCases");
-        WebDriverManager.chromedriver().timeout(30).setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-    }
-
-    public void endTest()
-    {
-        System.out.println("End Test: TestCases");
-        driver.close();
-        driver.quit();
-
-
-    }
+    
 
     public void TestCase_8(){
+        this.driver=TestCases.TestCases();
         driver.get(" https://www.w3schools.com/js/tryit.asp?filename=tryjs_prompt");
         driver.switchTo().frame("iframeResult");
         driver.findElement(By.xpath("//button[text()='Try it']")).click();
